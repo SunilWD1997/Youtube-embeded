@@ -1,0 +1,145 @@
+.container {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(0, 255, 255), rgb(44, 42, 165), rgb(0, 255, 255));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-right: 2px;
+    background-color: black;
+    border-radius: 15px;
+    opacity: .8;
+}
+
+.searchBar input {
+    border-radius: 15px;
+    padding: 8px 14px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    opacity: .8;
+}
+
+.searchBar i {
+    color: aliceblue;
+    background-color: red;
+    border-radius: 15px;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.searchBar i:hover {
+    background-color: rgb(41, 6, 240);
+}
+
+.weatherBox {
+    width: 240px;
+
+    background-color: black;
+    border-radius: 10px;
+    opacity: .7;
+    z-index: 10;
+    color: white;
+
+}
+
+.weatherBox .main {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.weatherBox .main .weather_condition {
+
+    font-size: 2.3rem;
+    animation: anim 3s ease-in-out  infinite alternate ;
+}
+
+
+@keyframes anim{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(8px);}
+}
+
+.weatherBox .main .location {
+
+    margin: 10px;
+}
+.weatherBox .main .location h6{
+
+   text-transform: capitalize;
+}
+
+.weatherBox .main p {
+
+    font-size: 10px;
+}
+
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.temperature h3 {
+    margin-top: 25px;
+    font-size: 4.5rem;
+}
+
+.temperature p {
+    margin-top: 5px;
+
+}
+.sky_condition {
+    text-align: center;
+    font-size: 12px;
+}
+
+
+
+.weather-details {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+
+}
+
+.weather-details * {
+    margin-bottom: 5px;
+}
+.weather-details p{
+   font-size: 11px;
+}
+
+.fa-solid{
+    margin-right: 4px;
+}
+@media screen and (max-width: 244px) {
+    .searchBar {
+        width: 100%;
+    }
+
+    .weatherBox {
+        width: 100%;
+
+    }
+}
