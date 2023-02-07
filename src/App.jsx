@@ -7,7 +7,7 @@ const App = () => {
 
   useEffect(() => {
 
-    fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCeVMnSShP_Iviwkknt83cww&maxResults=25&key=AIzaSyD1-F7vdmcpc-fYlZqvHemRfV8CXhRLQ4Y')
+    fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCeVMnSShP_Iviwkknt83cww&maxResults=2&key=AIzaSyD1-F7vdmcpc-fYlZqvHemRfV8CXhRLQ4Y')
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
@@ -46,6 +46,8 @@ const App = () => {
         return <div key={item.vid}>
 
           <iframe width="560" height="315" src={`https://www.youtube.com/embed/${item.vid}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          <p>{item.title}</p>
 
         </div>
       })}
